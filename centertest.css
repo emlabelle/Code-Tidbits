@@ -1,0 +1,88 @@
+/* props to this article: http://www.tipue.com/blog/center-a-div/ */
+
+.center-div {
+	margin: 0 auto;
+	max-width: 400px;
+	background: #ccc;
+} /*works for page-level centering or within div. use WIDTH instead for a fixed (non-responsive) width. centered div must have a width/max-width. To center vertically WITHIN A DIV, drop the margin:0 in outer div and add a height to inner div.*/
+
+/*-----*/
+
+.outer-div {
+	padding: 30px;
+	text-align: center;
+}
+.inner-div {
+	display: inline-block;
+	padding: 50px;
+} /*trick here is text-align:center outside and display:inline-block inside. does not require centered div to have a width*/
+
+/*-----*/
+
+/* Center a div at the bottom of a page: 
+
+.outer-div
+{
+     padding: 30px;
+}
+.inner-div
+{
+     margin: auto;
+     width: 100px;
+     height: 100px;  
+}
+
+*/
+
+/*-----*/
+
+.page-center-div {
+	position: absolute;
+	margin: auto;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+} /*center horizontally and vertically on a page
+
+/*-----*/
+
+.container {
+    text-align: center;
+}
+.left-div {
+    display: inline-block;
+    max-width: 500px;
+    vertical-align: top;
+    background: blue;
+}
+.right-div {
+    display: inline-block;
+    max-width: 350px;
+    background: red;
+}
+@media screen and (max-width: 600px) {
+    .left-div, .right-div {
+        max-width: 100%;
+    }
+} /*centering two responsive divs side by side*/
+
+/*-----*/
+
+.flex-container
+{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+}
+.item
+{
+     background-color: #f3f2ef;
+     border-radius: 3px;
+     width: 200px;
+     height: 100px; 
+} /*centering horizontally and vertically via flexbox*/
+
